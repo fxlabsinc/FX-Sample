@@ -55,6 +55,11 @@ testSuites:
     assertions:
       - "@StatusCode != 200"
     severity: Critical
+    # Default params: pageSize, page_size, maxResults, max_results
+    # e.g. adding more params.
+    matches:
+      - name: itemsPerPage
+      #- name: maxNumberOfResults
 
   - type: XSS_Injection
     assertions:

@@ -71,6 +71,11 @@ testSuites:
       - "@StatusCode != 200"
     severity: Critical
 
+  - type: sql_injection_timebound
+    assertions:
+      - "@ResponseTime >= 5000"
+    severity: Critical
+
   - type: log_forging
     postfix: log_forging
     assertions:

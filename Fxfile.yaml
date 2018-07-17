@@ -22,9 +22,14 @@ imports:
   '@PostgresSQLInjections': FXLabs/Common/Postgres-SQLInjections
   '@SQLServerSQLInjections': FXLabs/Common/SQLServer-SQLInjections
   '@MySQLSQLInjections': FXLabs/Common/MySQL-SQLInjections
+  '@MySQLTimeboundSQLInjections': FXLabs/Common/MySQL-TimeBound-SQL_Injection_Strings
+  '@PostgresTimeboundSQLInjections': FXLabs/Common/PostGreSQL-TimeBound-SQL_Injection_Strings
+  '@SQLServerTimeboundSQLInjections': FXLabs/Common/SQLServer-TimeBound-SQL_Injection_Strings
+  '@OracleTimeboundSQLInjections': FXLabs/Common/Oracle-TimeBound-SQL_Injection_Strings
 
   # No-SQL DB Injection String
   '@MongoDBSQLInjections': FXLabs/Common/MongoDB-SQLInjections
+  '@MongoDBTimeboundSQLInjections': FXLabs/Common/MongoDB-TimeBound-SQL_Injection_Strings
 
   # Cross-Site Scripting Injection Strings
   '@XSSSQLInjections': FXLabs/Common/XSS

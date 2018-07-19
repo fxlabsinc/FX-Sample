@@ -81,6 +81,25 @@ testSuites:
     assertions:
       - "@StatusCode != 200"
     severity: Critical
+    
+  - type: rbac
+    assertions:
+      - "@StatusCode == 403"
+    severity: Critical
+    # Match is applied in the order patterns are defined and once a match is found the comparision will stop.
+    matches:
+      # comma seperated paths with patterns.
+      # Examples
+      #  api/t?st — matches api/test but also api/tast or api/txst
+      #  api/*-action — matches all action in the api path
+      #  api/**/test — matches all test path underneath the api path
+
+      #- pathPatterns: "/api/volume-utilization/volume-patient-hours, /api/health"
+      #  methods:
+      #  denyRoles: Default
+      - pathPatterns: "/api/**"
+        methods: # empty = GET,POST,PUT,DELETE
+        denyRoles: Anonymous
 
   - type: invalid_datatype
     assertions:

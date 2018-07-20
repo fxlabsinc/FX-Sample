@@ -73,7 +73,7 @@ testSuites:
 
   - type: sql_injection_timebound
     assertions:
-      - "@ResponseTime >= 5000"
+      - "@ResponseTime < 7000"
     severity: Critical
 
   - type: log_forging
